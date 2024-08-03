@@ -18,8 +18,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       drawer: const Drawer(),
       appBar: AppBar(
-        // backgroundColor: AppColor.black,
-        // foregroundColor: AppColor.white,
         title: Text(
           "Flutter Design",
           style: TextStyle(
@@ -28,7 +26,10 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.notifications_on),
+            icon: const Icon(
+              Icons.notifications_on,
+              color: AppColor.black,
+            ),
           )
         ],
         bottom: Tab(
@@ -41,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
               decoration: InputDecoration(
                 focusedBorder: ComponentsCustom.outlineInput,
                 enabledBorder: ComponentsCustom.outlineInput,
-                contentPadding: EdgeInsets.zero, // remove padding in textfield
+                contentPadding: EdgeInsets.zero,
                 prefixIcon: const Icon(
                   Icons.search,
                   color: AppColor.black,
