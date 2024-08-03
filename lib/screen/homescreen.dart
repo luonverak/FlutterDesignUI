@@ -11,6 +11,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int number = 1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,23 +71,30 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             Text(
-              "1",
+              "$number",
               style: TextStyle(fontSize: AppFontSize.xlarge),
             )
           ],
         ),
       ),
-      floatingActionButton: Container(
-        width: 60,
-        height: 60,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(50),
-          color: AppColor.blue,
-        ),
-        child: const Icon(
-          Icons.add,
-          color: AppColor.white,
-          size: 30,
+      floatingActionButton: GestureDetector(
+        onTap: () {
+          setState(() {
+            number += 1;
+          });
+        },
+        child: Container(
+          width: 60,
+          height: 60,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(50),
+            color: AppColor.blue,
+          ),
+          child: const Icon(
+            Icons.add,
+            color: AppColor.white,
+            size: 30,
+          ),
         ),
       ),
     );
