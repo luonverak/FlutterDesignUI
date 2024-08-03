@@ -16,12 +16,10 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const Drawer(),
       appBar: AppBar(
         // backgroundColor: AppColor.black,
         // foregroundColor: AppColor.white,
-        leading: const Icon(
-          Icons.menu,
-        ),
         title: Text(
           "Flutter Design",
           style: TextStyle(
